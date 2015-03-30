@@ -1,0 +1,7 @@
+/ homepage
+/login
+/registration
+/users/12
+  /users/12/talks/32
+/talks/32
+/talks/add
