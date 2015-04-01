@@ -5,3 +5,8 @@
   /users/12/talks/32
 /talks/32
 /talks/add
+
+1. Home page with list of talks
+2. Click on a talk to fo to details
+3. Click on a user to see a list of talks
+4. Clicking Add should prompt to login

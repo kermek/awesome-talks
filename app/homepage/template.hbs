@@ -1,0 +1,11 @@
+<ul class="talks-list">
+  {{#each talks in model}}
+  <li class="talks-badge">
+    {{#link-to 'talks' talks.id}}
+      {{talks.title}}
+    {{/link-to}}
+  </li>
+  {{/each}}
+</ul>
+
+{{outlet}}
