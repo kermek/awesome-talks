@@ -2,9 +2,18 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   beforeModel(transition) {
-    if (this.session.get('isLoggedIn')) {
+    const isLoggedIn = this.session.get('isLoggedIn');
+
+    if (!isLoggedIn) {
       this.session.set('attemptedTransition', transition);
-      this.redirectTo('login');
+      this.transitionTo('login');
+    }
+  },
+
+  actions: {
+    addTalk (title) {
+      var newTalk = this.store.createRecord('talk', { title });
+      // newTalk.save().then()
     }
   }
 });

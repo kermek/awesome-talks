@@ -1,10 +1,16 @@
+var DATA = [
+  { id: 11, title: 'Ember in Action' },
+  { id: 12, title: 'React in Action' },
+  { id: 13, title: 'Angular in Action' }
+];
+
 module.exports = function(app) {
   var express = require('express');
   var talksRouter = express.Router();
 
   talksRouter.get('/', function(req, res) {
     res.send({
-      'talks': []
+      'talks': DATA
     });
   });
 
@@ -14,9 +20,9 @@ module.exports = function(app) {
 
   talksRouter.get('/:id', function(req, res) {
     res.send({
-      'talks': {
-        id: req.params.id
-      }
+      'talks': DATA.filter(function (item) {
+        return item.id == req.params.id;
+      })[0]
     });
   });
 
