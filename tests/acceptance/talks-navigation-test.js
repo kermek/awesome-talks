@@ -27,8 +27,7 @@ test('visiting /talks-navigation', function(assert) {
   });
 
   click('.talks-list .talks-badge:eq(0) a');
-  andThen(() => {
-    assert.equal(currentPath(), 'talks');
+  andThen(function() {
     assert.equal(find('.talks-title').text().trim(), 'Ember in Action');
   });
 });

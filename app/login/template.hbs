@@ -1,7 +1,3 @@
-<form {{action 'login' on='submit'}}>
-  <p><label for="input-username">Please, enter your username</label>
-  {{input type="text" id="input-username" value=username}}</p>
-  <p><input type="submit" value="Login"></p>
-</form>
+{{login-form onLogin='login'}}
 
 {{outlet}}
